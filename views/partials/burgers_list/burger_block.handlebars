@@ -1,0 +1,10 @@
+<tr>
+    <td>{{burger_name}}</td>
+    {{#if notEaten}}
+    <td>
+        <button class="change-state" data-id="{{id}}">
+            Devour It!
+        </button>
+    </td>
+    {{/if}}
+</tr>

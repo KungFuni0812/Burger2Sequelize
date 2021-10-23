@@ -1,0 +1,27 @@
+html{
+    background-color:rgb(143,205,236);
+}
+
+h1 {
+    color: rgb(52,58,64);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#JBHeader{
+    background-color:rgb(143,205,236);
+}
+
+#cbody{
+    background-color: rgb(143,205,236);
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.change-state{
+    color:white;
+    background-color: rgb(52,58,64);
+}
+
+body{
+    background-color:rgb(143,205,236);
+}

@@ -1,0 +1,54 @@
+<div class = "container-lg" id="ctainer">
+    <div class="jumbotron jumbotron-fluid text-center" id="JBHeader">
+            <div class="container">
+                <h1 class="display-4"><b>Eat Da Burger!</b></h1>
+                <hr>
+            </div>
+    </div>
+
+    <div class = "row" id="cbody">
+        <div class = "col-4 AvalBurgerList center-align">
+            <br>
+            <br>
+            <h4 class="text-center">Available Burgers</h4>
+            <hr>
+            <table class="table table-borderless">
+                <tbody>
+                {{#each burgers}}
+                    {{#unless devoured}}
+                        {{> burgers_list/burger_block notEaten=true}}
+                    {{/unless}}
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+        <div class = "col-4">
+            <br>
+            <br>
+            <img src="/assets/img/burger.PNG" class="img-fluid burgerimg" alt="burger">
+            <br>
+            <br>
+            <form class = "createBurger">
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Enter a burger you want to eat and Click the Submit button to add!</label>
+                    <textarea class="form-control" id="newBurger" rows="3"></textarea>
+                    <br>
+                    <button type="submit" class="btn btn-dark btn-lg btn-block">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class = "col-4 DevouredBurgerList center-align">
+            <br>
+            <br>
+            <h4 class="text-center">Burgers Eaten</h4>
+            <hr>
+            <table class="table table-borderless">
+                {{#each burgers}}
+                    {{#if devoured}}
+                        {{> burgers_list/burger_block notEaten=false}}
+                    {{/if}}
+                {{/each}}
+            </table>
+        </div>
+    </div>
+</div>
